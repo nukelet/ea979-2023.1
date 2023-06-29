@@ -83,7 +83,7 @@ function main() {
     for (let i = 0; i < pos.count; i++){
         v3.fromBufferAttribute(pos, i);
         ringsGeom.attributes.uv.setXY(i, v3.length() < 26 ? 0 : 1, 1);
-        }
+    }
 
     let rings = new THREE.Mesh  ( ringsGeom, ringsMat );
     rings.name = "rings";
@@ -192,7 +192,7 @@ function mudaPlaneta() {
                             break;
 
         case "Saturno"  :   obj.material = planetaMat[planetas.SATURNO];
-                            scene.getObjectByName("rings").visible = true;
+                            scene.getObjectByName("rings").visible = false;
                             break;
 
         case "Urano"    :   obj.material = planetaMat[planetas.URANO];
